@@ -1,8 +1,8 @@
 export const TimerSession = () => {
   return (
-    <div id="timer-label">
-      <div>Session</div>
-      <div id="time-left">25:00</div>
+    <div className="clock-session">
+      <div id="timer-label">Session</div>
+      <div id="time-left"> 25:00</div>
     </div>
   );
 };

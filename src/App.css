@@ -1,7 +1,83 @@
 body {
   background-color: #24555c;
   color: #fff;
+  font-size: 1.5rem;
 }
 .App {
   text-align: center;
+  width: 35%;
+  margin: 2rem auto;
+}
+
+.header {
+  font-size: 3rem;
+  margin: 1.5rem;
+}
+
+.breaks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.break-length-container,
+.break-session-container {
+}
+.break-left,
+.break-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  margin: 0 auto;
+}
+
+#break-decrement,
+#break-increment {
+  margin: 0 auto;
+}
+
+#session-increment,
+#session-decrement {
+  margin: 0 auto;
+}
+
+.clock-session {
+  margin: 2rem auto 1rem;
+  border-radius: 35px;
+  border: 7px solid #13353a;
+  width: 55%;
+  height: 8rem;
+}
+
+#timer-label {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+#time-left {
+  margin-top: 5px;
+  font-size: 3.5rem;
+}
+
+#start_stop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+#start_stop .fa-sync {
+  margin-left: 10px;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 15px;
+  color: #a62a24;
+}
+
+.author {
+  color: #08264d;
+  font-size: 20px;
+  text-decoration: none;
 }

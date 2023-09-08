@@ -1,19 +1,19 @@
-import {
-  FaAdjust,
-  FaArrowUp,
-  FaPause,
-  FaPlay,
-  FaStarHalfAlt,
-} from "react-icons/fa";
+import { FaPause, FaPlay, FaSync } from "react-icons/fa";
 
 export const TimerControllers = () => {
   return (
     <div>
       <div id="start_stop">
-        <FaPlay />
-        <FaPause />
+        <div className="fa-play">
+          <FaPlay />
+        </div>
+        <div className="fa-pause">
+          <FaPause />
+        </div>
+        <div className="fa-sync" id="reset">
+          <FaSync />
+        </div>
       </div>
-      <div id="reset">fa refresh will go here</div>
     </div>
   );
 };
