@@ -1,16 +1,13 @@
 import { FaPause, FaPlay, FaSync } from "react-icons/fa";
 
-export const TimerControllers = () => {
+export const TimerControllers = ({ reset, playPause, isPlaying }) => {
   return (
     <div>
-      <div id="start_stop">
-        <div className="fa-play">
-          <FaPlay />
+      <div id="controller">
+        <div id="start_stop" onClick={playPause}>
+          {isPlaying ? <FaPause /> : <FaPlay />}
         </div>
-        <div className="fa-pause">
-          <FaPause />
-        </div>
-        <div className="fa-sync" id="reset">
+        <div className="fa-sync" id="reset" onClick={reset}>
           <FaSync />
         </div>
       </div>
