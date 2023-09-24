@@ -141,19 +141,19 @@ function App() {
   };
 
   const playAudio = () => {
-    // let audio = document.getElementById("beep");
-    // audio.currentTime = 0;
-    // audio.play();
-    aud.current.currentTime = 0;
-    aud.play();
+    let audio = document.getElementById("beep");
+    audio.currentTime = 0;
+    audio.play();
+    // aud.current.currentTime = 0;
+    // aud.play();
   };
 
   const stopAudio = () => {
-    // let audio = document.getElementById("beep");
-    // audio.currentTime = 0;
-    // audio.pause();
-    aud.current.currentTime = 0;
-    aud.current.pause();
+    let audio = document.getElementById("beep");
+    audio.currentTime = 0;
+    audio.pause();
+    // aud.current.currentTime = 0;
+    // aud.current.pause();
   };
 
   const timeUpStyle = (time) => {
