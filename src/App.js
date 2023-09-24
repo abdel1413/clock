@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
-import { Author } from "./Components/Author";
-
+import { Length2 } from "./Components/BreakLength";
 import { Length } from "./Components/BreakSession";
 import { TimerControllers } from "./Components/TimerControllers";
 import { TimerSession } from "./Components/TimerSession";
-import { Length2 } from "./Components/BreakLength";
+import { Author } from "./Components/Author";
 
 function App() {
   const [breakLength, setBreakLength] = useState(5 * 60);
@@ -15,6 +14,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [onBreak, setOnBreak] = useState(false);
   let clockSessionStyle = useRef();
+  const aud = useRef("beep");
 
   let currTitle = timerLabel === "SESSION" ? "Session" : "Break";
 
@@ -141,15 +141,19 @@ function App() {
   };
 
   const playAudio = () => {
-    let audio = document.getElementById("beep");
-    audio.currentTime = 0;
-    audio.play();
+    // let audio = document.getElementById("beep");
+    // audio.currentTime = 0;
+    // audio.play();
+    aud.current.currentTime = 0;
+    aud.play();
   };
 
   const stopAudio = () => {
-    let audio = document.getElementById("beep");
-    audio.currentTime = 0;
-    audio.pause();
+    // let audio = document.getElementById("beep");
+    // audio.currentTime = 0;
+    // audio.pause();
+    aud.current.currentTime = 0;
+    aud.current.pause();
   };
 
   const timeUpStyle = (time) => {
@@ -239,6 +243,7 @@ function App() {
         />
 
         <audio
+          ref={aud}
           id="beep"
           preload="auto"
           src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"

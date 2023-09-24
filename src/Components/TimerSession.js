@@ -1,7 +1,6 @@
 export const TimerSession = ({
   timeLeft,
   clockSessionStyle,
-
   timerLabel,
   currTitle,
 }) => {
